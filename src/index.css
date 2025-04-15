@@ -231,10 +231,16 @@ main {
   display: block;
   width: 200px;
   margin: 1rem auto 0 auto;
-  color: var(--clr-red-dark);
+  color: var(--clr-green-dark);
   letter-spacing: var(--spacing);
   background: transparent;
-  border: 1px solid var(--clr-red-dark);
+  border: 1px solid var(--clr-green-dark);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
+  transition: all .4s ease-in-out;
+}
+
+.single-course .delete-btn:hover {
+  color: var(--clr-red-dark);
+  border-color: var(--clr-red-dark);
 }
