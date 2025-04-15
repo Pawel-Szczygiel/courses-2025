@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-const Course = ({ name, info, image, price }) => {
+const Course = ({ id, name, info, image, price, removeCourse }) => {
     const [readMore, setReadMore] = useState(false);
 
+    const handleDelete = () => removeCourse(id);
 
     return (
     <article className='single-course'>
@@ -18,11 +19,18 @@ const Course = ({ name, info, image, price }) => {
                 }
                 <button onClick={() => setReadMore(!readMore)}>
                 {
-                    readMore ? 'read less' : 'read more'
+                    readMore ? (
+                        <i class="em em-point_left" aria-role="presentation" aria-label="WHITE LEFT POINTING BACKHAND INDEX"></i>
+                    ) : (
+                        <i class="em em-point_right" aria-role="presentation" aria-label="WHITE RIGHT POINTING BACKHAND INDEX"></i>
+                    )
                 }
                 </button>
             </p>
-            <button className='delete-btn'>not interested</button>
+            <button className='delete-btn' onClick={handleDelete}>
+                <span>not </span>
+                interested
+            </button>
         </footer>
     </article>
   )
