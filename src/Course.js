@@ -7,7 +7,9 @@ const Course = ({ id, name, info, image, price, removeCourse }) => {
 
     return (
     <article className='single-course'>
-        <img src={image} alt={name}/>
+        <div className='img'>
+            <img src={image} alt={name}/>
+        </div>
         <footer>
             <div className='course-info'>
                 <h4>{name}</h4>
